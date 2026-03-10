@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && npm run dev)"
+    ]
+  }
+}

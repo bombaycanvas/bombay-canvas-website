@@ -10,25 +10,31 @@ const ServicesSlider = () => {
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
   useGSAP(() => {
-    if (!sliderRef.current) return;
-    const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth;
+    if (!sliderRef.current || isTablet) return;
 
-    if (!isTablet) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".services-section",
-          start: "2% top",
-          end: `+=${scrollAmount}px`,
-          scrub: true,
-          pin: true,
+    const getScrollAmount = () => {
+      const section = document.querySelector(".services-section") as HTMLElement;
+      return section.scrollWidth - window.innerWidth;
+    };
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".services-section",
+        start: "2% top",
+        end: () => `+=${getScrollAmount()}px`,
+        scrub: true,
+        pin: true,
+        invalidateOnRefresh: true,
+        onRefresh() {
+          gsap.set(".services-section", { x: 0 });
         },
-      });
+      },
+    });
 
-      tl.to(".services-section", {
-        x: `-${scrollAmount}px`,
-        ease: "none",
-      });
-    }
+    tl.to(".services-section", {
+      x: () => `-${getScrollAmount()}px`,
+      ease: "none",
+    });
 
     const titleTl = gsap.timeline({
       scrollTrigger: {

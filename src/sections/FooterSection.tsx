@@ -177,14 +177,13 @@ const FooterSection = () => {
           </div>
         </div>
 
-        {/* Canvas logo — centered below social icons */}
+        {/* Canvas logo — absolute, centred below social icons, no layout impact */}
         {!isMobile && (
-          <div className="flex-center mt-8 relative z-10">
-            <canvas
-              ref={canvasRef}
-              style={{ width: "40vw", height: "25vw" }}
-            />
-          </div>
+          <canvas
+            ref={canvasRef}
+            className="absolute left-1/2 -translate-x-1/2 pointer-events-none z-0"
+            style={{ width: "40vw", height: "25vw", top: "48%" }}
+          />
         )}
 
         <div className="footer-links mt-40 md:px-10 px-5 flex gap-10 md:flex-row flex-col justify-between text-milk font-paragraph md:text-lg font-medium relative z-10">

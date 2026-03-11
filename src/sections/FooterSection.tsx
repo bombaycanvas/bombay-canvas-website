@@ -165,15 +165,41 @@ const FooterSection = () => {
           </h1>
         </div>
 
-        <div className="flex-center gap-5 relative z-10 md:mt-20 mt-5">
-          <div className="footer-social social-btn">
-            <img src="/images/yt.svg" alt="YouTube" />
+        <div className="flex flex-col items-center gap-6 relative z-10 md:mt-20 mt-5">
+          <div className="flex items-center gap-4">
+            <a
+              href="https://wa.me/919117211729"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social social-btn"
+            >
+              <img src="/images/whatsapp.svg" alt="WhatsApp" />
+            </a>
+            <a
+              href="tel:+919117211729"
+              className="footer-social font-paragraph text-milk hover:text-brand transition-colors tracking-widest font-bold"
+              style={{ fontSize: "clamp(1.4rem, 2.5vw, 2.5rem)" }}
+            >
+              +91-9117211729
+            </a>
           </div>
-          <div className="footer-social social-btn">
-            <img src="/images/insta.svg" alt="Instagram" />
-          </div>
-          <div className="footer-social social-btn">
-            <img src="/images/tiktok.svg" alt="TikTok" />
+          <div className="flex-center gap-5">
+            <a
+              href="https://www.youtube.com/@bombaycanvas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social social-btn"
+            >
+              <img src="/images/yt.svg" alt="YouTube" />
+            </a>
+            <a
+              href="https://www.instagram.com/bombay.canvas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social social-btn"
+            >
+              <img src="/images/insta.svg" alt="Instagram" />
+            </a>
           </div>
         </div>
 

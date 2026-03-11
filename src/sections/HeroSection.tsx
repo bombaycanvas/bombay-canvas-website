@@ -105,9 +105,14 @@ const HeroSection = () => {
             networks — with a cinematic 4:3 version ready for TV and streaming.
           </h2>
 
-          <div className="hero-button">
+          <a
+            href="https://mail.google.com/mail/?view=cm&to=creative@bombaycanvas.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-button"
+          >
             <p>Work With Us</p>
-          </div>
+          </a>
 
           {/* Proof strip */}
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 md:mt-20 mt-12">

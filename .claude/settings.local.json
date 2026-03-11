@@ -13,7 +13,10 @@
       "Bash(ffmpeg -i \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/assets/Canvas - 4.3.mp4\" -ss 2.5 -frames:v 1 -vf \"colorkey=0xF0A030:0.25:0.05,pad=iw:ih:0:0:black\" -update 1 \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/assets/canvas_key_preview.png\" -y 2>&1 | tail -2)",
       "Bash(ffmpeg -i \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/assets/Canvas - 4.3.mp4\" -ss 2.5 -frames:v 1 -vf \"colorkey=0xF0A030:0.2:0.08,pad=iw:ih:0:0:black\" -update 1 \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/assets/canvas_key_preview.png\" -y 2>&1 | tail -2)",
       "Bash(ffmpeg -i \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/assets/Canvas - 4.3.mp4\" -ss 2.5 -frames:v 1 -vf \"chromakey=0xF0A030:0.15:0.05,pad=iw:ih:0:0:black\" -update 1 \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/assets/canvas_key_preview.png\" -y 2>&1 | tail -2)",
-      "Bash(mkdir -p \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/frames/canvas-logo\" && ffmpeg -i \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/assets/Canvas - 4.3.mp4\" -vf \"fps=30,chromakey=0xF0A030:0.15:0.05\" -pix_fmt yuva420p \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/frames/canvas-logo/frame_%04d.png\" 2>&1 | tail -5)"
+      "Bash(mkdir -p \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/frames/canvas-logo\" && ffmpeg -i \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/assets/Canvas - 4.3.mp4\" -vf \"fps=30,chromakey=0xF0A030:0.15:0.05\" -pix_fmt yuva420p \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/frames/canvas-logo/frame_%04d.png\" 2>&1 | tail -5)",
+      "Bash(cd \"/c/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && npm install react-router-dom)",
+      "Bash(cd \"/c/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && npm run lint 2>&1)",
+      "Bash(cd \"/c/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && npx tsc --noEmit 2>&1 | grep -E \"pages/|NavBar|main.tsx\")"
     ]
   }
 }

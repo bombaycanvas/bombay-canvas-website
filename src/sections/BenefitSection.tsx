@@ -77,7 +77,7 @@ const BenefitSection = () => {
         </div>
       </div>
 
-      <div className="relative overlay-box">
+      <div className="relative overlay-box bg-brand pb-[20vh]">
         <VideoPinSection />
       </div>
     </section>

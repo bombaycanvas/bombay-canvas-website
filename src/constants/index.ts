@@ -33,37 +33,37 @@ export const distributionStats = [
   { label: "OTT Downloads", amount: "10K+" },
 ];
 
-export const testimonialCards = [
+export const showPosters = [
   {
-    src: "/videos/f1.mp4",
+    src: "/assets/flavours_of_a_billion_720.png",
     rotation: "rotate-z-[-10deg]",
     translation: "translate-y-[-5%]",
   },
   {
-    src: "/videos/f2.mp4",
+    src: "/assets/the_great_indian_heist_v2_720.jpg",
     rotation: "rotate-z-[4deg]",
   },
   {
-    src: "/videos/f3.mp4",
+    src: "/assets/who_are_we_final_new_720.jpg",
     rotation: "rotate-z-[-4deg]",
     translation: "translate-y-[-5%]",
   },
   {
-    src: "/videos/f4.mp4",
+    src: "/assets/chatgpt_image_dec_19__2025__01_50_15_am_720.png",
     rotation: "rotate-z-[4deg]",
     translation: "translate-y-[5%]",
   },
   {
-    src: "/videos/f5.mp4",
+    src: "/assets/chatgpt_image_dec_9__2025__04_10_28_am_720.png",
     rotation: "rotate-z-[-10deg]",
   },
   {
-    src: "/videos/f6.mp4",
+    src: "/assets/chatgpt_image_dec_9__2025__04_16_50_am_720.png",
     rotation: "rotate-z-[4deg]",
     translation: "translate-y-[5%]",
   },
   {
-    src: "/videos/f7.mp4",
+    src: "/assets/chatgpt_image_nov_22__2025__02_48_57_pm_720.png",
     rotation: "rotate-z-[-3deg]",
     translation: "translate-y-[10%]",
   },

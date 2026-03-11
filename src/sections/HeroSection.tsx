@@ -87,7 +87,7 @@ const HeroSection = () => {
 
         <div className="hero-content opacity-0">
           <div className="overflow-hidden">
-            <h1 className="hero-title">We Create Shows For Brands</h1>
+            <h1 className="hero-title text-center">We Create Shows<br />For Brands</h1>
           </div>
           <div
             style={{

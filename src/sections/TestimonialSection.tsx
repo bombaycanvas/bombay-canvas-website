@@ -1,11 +1,8 @@
-import { useRef } from "react";
-import { testimonialCards } from "../constants";
+import { showPosters } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const TestimonialSection = () => {
-  const vdRef = useRef<(HTMLVideoElement | null)[]>([]);
-
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -44,20 +41,12 @@ const TestimonialSection = () => {
       },
     });
 
-    pinTl.from(".vd-card", {
+    pinTl.from(".poster-card", {
       yPercent: 150,
       stagger: 0.2,
       ease: "power1.inOut",
     });
   });
-
-  const handlePlay = (index: number) => {
-    vdRef.current[index]?.play();
-  };
-
-  const handlePause = (index: number) => {
-    vdRef.current[index]?.pause();
-  };
 
   return (
     <section className="testimonials-section">
@@ -68,19 +57,14 @@ const TestimonialSection = () => {
       </div>
 
       <div className="pin-box">
-        {testimonialCards.map((card, index) => (
+        {showPosters.map((poster, index) => (
           <div
             key={index}
-            className={`vd-card ${card.translation || ""} ${card.rotation}`}
-            onMouseEnter={() => handlePlay(index)}
-            onMouseLeave={() => handlePause(index)}
+            className={`poster-card ${poster.translation || ""} ${poster.rotation} md:w-96 w-80 flex-none md:rounded-[2vw] rounded-3xl -ms-44 overflow-hidden 2xl:relative absolute border-[.5vw] border-brand`}
           >
-            <video
-              ref={(el) => { vdRef.current[index] = el; }}
-              src={card.src}
-              playsInline
-              muted
-              loop
+            <img
+              src={poster.src}
+              alt={`Show poster ${index + 1}`}
               className="size-full object-cover"
             />
           </div>

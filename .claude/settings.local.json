@@ -3,7 +3,9 @@
     "allow": [
       "Bash(cd \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && npm run dev)",
       "Bash(cd \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && npm install motion lucide-react && npm uninstall gsap @gsap/react)",
-      "Bash(cd \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && mkdir -p public && cp -r _temp_template/public/* public/ && mv public/f*.mp4 public/videos/ 2>/dev/null; mv public/hero-bg.mp4 public/videos/ 2>/dev/null; mv public/pin-video.mp4 public/videos/ 2>/dev/null; mv public/splash.mp4 public/videos/ 2>/dev/null; rm -rf _temp_template && mkdir -p src/components src/sections src/constants && echo \"done\")"
+      "Bash(cd \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && mkdir -p public && cp -r _temp_template/public/* public/ && mv public/f*.mp4 public/videos/ 2>/dev/null; mv public/hero-bg.mp4 public/videos/ 2>/dev/null; mv public/pin-video.mp4 public/videos/ 2>/dev/null; mv public/splash.mp4 public/videos/ 2>/dev/null; rm -rf _temp_template && mkdir -p src/components src/sections src/constants && echo \"done\")",
+      "Bash(ffprobe -v error -show_entries stream=width,height,duration,nb_frames,r_frame_rate -of default=noprint_wrappers=1 \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/assets/Bombay.canvas.v2 \\(1\\) \\(online-video-cutter.com\\).mp4\" 2>&1)",
+      "Bash(mkdir -p \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/frames/hero-video\" && ffmpeg -i \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/assets/Bombay.canvas.v2 \\(1\\) \\(online-video-cutter.com\\).mp4\" -vf \"fps=30,scale=1920:1080\" -q:v 2 \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1/public/frames/hero-video/frame_%04d.jpg\" 2>&1)"
     ]
   }
 }

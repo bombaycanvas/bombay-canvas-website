@@ -212,7 +212,7 @@ body::-webkit-scrollbar {
 
   /* Testimonials */
   .testimonials-section {
-    @apply bg-brand relative w-full h-[180dvh];
+    @apply bg-brand relative w-full h-[110dvh];
 
     .pin-box {
       @apply flex items-center justify-center w-full ps-52 absolute 2xl:bottom-32 lg:bottom-0 bottom-[40vh];
@@ -230,7 +230,7 @@ body::-webkit-scrollbar {
 
   /* Footer */
   .footer-section {
-    @apply min-h-dvh overflow-hidden relative bg-[#222123];
+    @apply min-h-dvh overflow-hidden relative bg-[#222123] -mt-[20vh];
 
     .social-btn {
       @apply border border-[#faeade33] md:size-[5vw] size-14 md:p-0 p-3 flex justify-center items-center rounded-full hover:bg-[#ffffff1a] transition-colors cursor-pointer;

@@ -53,7 +53,7 @@ const BenefitSection = () => {
             Because creating short-form shows isn't everyone's cup of tea.
           </p>
 
-          <div className="mt-20 col-center">
+          <div className="mt-20 col-center" style={{ transform: "translateY(-140px)" }}>
             {whyUsPoints.map((point, i) => (
               <ClipPathTitle
                 key={point.title}

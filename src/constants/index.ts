@@ -1,30 +1,9 @@
 export const navLinks = ["Shows", "About", "Creators", "Contact"];
 
 export const shows = [
-  {
-    title: "Show One",
-    description: "A branded micro-series coming soon.",
-    color: "#F09B36",
-    rotation: "md:rotate-[-8deg] rotate-0",
-  },
-  {
-    title: "Show Two",
-    description: "A branded micro-series coming soon.",
-    color: "#A68A56",
-    rotation: "md:rotate-[8deg] rotate-0",
-  },
-  {
-    title: "Show Three",
-    description: "A branded micro-series coming soon.",
-    color: "#D98528",
-    rotation: "md:rotate-[-8deg] rotate-0",
-  },
-  {
-    title: "Show Four",
-    description: "A branded micro-series coming soon.",
-    color: "#3A2613",
-    rotation: "md:rotate-[8deg] rotate-0",
-  },
+  { src: "/assets/Untitled (5).png", rotation: "md:rotate-[-8deg] rotate-0" },
+  { src: "/assets/Untitled (4).png", rotation: "md:rotate-[8deg] rotate-0" },
+  { src: "/assets/Untitled (6).png", rotation: "md:rotate-[-8deg] rotate-0" },
 ];
 
 export const distributionStats = [

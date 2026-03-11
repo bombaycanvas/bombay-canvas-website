@@ -44,7 +44,7 @@ const ServicesTitle = () => {
   return (
     <div className="general-title col-center h-full 2xl:gap-32 xl:gap-24 gap-16">
       <div className="overflow-hidden 2xl:py-0 py-3 first-text-split">
-        <h1>Our</h1>
+        <h1>From</h1>
       </div>
 
       <div
@@ -54,12 +54,12 @@ const ServicesTitle = () => {
         className="services-text-scroll"
       >
         <div className="bg-brand-dark pb-5 2xl:pt-0 pt-3 2xl:px-5 px-3">
-          <h2 className="text-brand">Branded</h2>
+          <h2 className="text-brand">The</h2>
         </div>
       </div>
 
       <div className="overflow-hidden 2xl:py-0 py-3 second-text-split">
-        <h1>Shows</h1>
+        <h1>Screen</h1>
       </div>
     </div>
   );

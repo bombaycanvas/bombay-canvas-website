@@ -1,44 +1,19 @@
-import { useMediaQuery } from "react-responsive";
-import { distributionStats } from "../constants";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
 
 const ShowcaseSection = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const displayStats = isMobile ? distributionStats.slice(0, 3) : distributionStats;
-
   useGSAP(() => {
-    const titleSplit = SplitText.create(".showcase-title", {
+    const split = SplitText.create(".cinema-title", {
       type: "chars",
     });
-    const paragraphSplit = SplitText.create(".showcase-section p", {
-      type: "words, lines",
-      linesClass: "paragraph-line",
-    });
 
-    const contentTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".showcase-section",
-        start: "top center",
-        toggleActions: "play reverse play reverse",
-      },
-    });
-    contentTl
-      .from(titleSplit.chars, {
-        yPercent: 100,
-        stagger: 0.02,
-        ease: "power2.out",
-      })
-      .from(paragraphSplit.words, {
-        yPercent: 300,
-        rotate: 3,
-        ease: "power1.inOut",
-        duration: 1,
-        stagger: 0.01,
-      });
-
-    const titleTl = gsap.timeline({
+    gsap.from(split.chars, {
+      yPercent: 110,
+      opacity: 0,
+      stagger: 0.04,
+      duration: 0.9,
+      ease: "power3.out",
       scrollTrigger: {
         trigger: ".showcase-section",
         start: "top 80%",
@@ -46,71 +21,48 @@ const ShowcaseSection = () => {
       },
     });
 
-    titleTl.to(".showcase-text-scroll", {
-      duration: 1,
-      opacity: 1,
-      clipPath: "polygon(100% 0, 0 0, 0 100%, 100% 100%)",
-      ease: "power1.inOut",
+    gsap.from(".cinema-sub", {
+      yPercent: 30,
+      opacity: 0,
+      duration: 0.8,
+      delay: 0.4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".showcase-section",
+        start: "top 80%",
+        toggleActions: "play reverse play reverse",
+      },
     });
   });
 
   return (
     <section className="showcase-section">
+      {/* Background image */}
       <img
-        src="/images/slider-dip.png"
+        src="/assets/Untitled (2).png"
         alt=""
-        className="w-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
       />
 
-      <img src="/images/big-img.png" alt="" className="big-img" />
+      {/* Dark overlay for text contrast */}
+      <div className="absolute inset-0 bg-black/40" />
 
-      <div className="flex md:flex-row flex-col justify-between md:px-10 px-5 mt-14 md:mt-0">
-        <div className="relative inline-block md:translate-y-20">
-          <div className="general-title relative flex flex-col justify-center items-center gap-24">
-            <div className="overflow-hidden place-self-start">
-              <h1 className="showcase-title">Already a Hit</h1>
-            </div>
-            <div
-              style={{
-                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
-              }}
-              className="showcase-text-scroll place-self-start"
-            >
-              <div className="bg-brand-mid pb-5 md:pt-0 pt-3 md:px-5 px-3">
-                <h2 className="text-cream">Before Launch</h2>
-              </div>
-            </div>
-          </div>
+      {/* Text content */}
+      <div className="relative z-10 h-full flex flex-col justify-center md:px-16 px-6 pt-10">
+        <div className="overflow-hidden">
+          <h1 className="cinema-title">CINEMA</h1>
+        </div>
+        <div className="overflow-hidden">
+          <h1 className="cinema-title">ON</h1>
+        </div>
+        <div className="overflow-hidden">
+          <h1 className="cinema-title">REELS</h1>
         </div>
 
-        <div className="flex md:justify-center items-center translate-y-5">
-          <div className="md:max-w-xs max-w-md">
-            <p className="text-lg md:text-right text-balance font-paragraph text-brand-dark">
-              Every Bombay Canvas series launches with distribution across our
-              owned pages, 200+ creator channels, and our own OTT platform.
-            </p>
-          </div>
-        </div>
-
-        <div className="showcase-box">
-          <div className="list-wrapper">
-            {displayStats.map((stat, index) => (
-              <div key={index} className="relative flex-1 col-center">
-                <div>
-                  <p className="md:text-lg font-paragraph">{stat.label}</p>
-                  <p className="font-paragraph text-sm mt-2">over</p>
-                  <p className="text-2xl md:text-4xl tracking-tighter font-bold">
-                    {stat.amount}
-                  </p>
-                </div>
-
-                {index !== displayStats.length - 1 && (
-                  <div className="spacer-border" />
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+        <p className="cinema-sub mt-6 text-white/80 font-paragraph text-sm md:text-base">
+          Presented by<br />
+          <span className="text-white font-medium">The Bombay Canvas</span>
+        </p>
       </div>
     </section>
   );

@@ -156,34 +156,12 @@ body::-webkit-scrollbar {
 
   /* Showcase */
   .showcase-section {
-    @apply min-h-dvh 2xl:h-[120dvh] overflow-hidden relative;
+    @apply h-dvh overflow-hidden relative;
 
-    .big-img {
-      @apply w-full absolute 2xl:h-full md:h-2/3 h-1/2 left-0 bottom-0 object-bottom 2xl:object-contain object-cover;
-    }
-
-    .showcase-title {
-      @apply 2xl:max-w-4xl xl:max-w-2xl md:py-0 py-3 md:pb-5 pb-0 lg:pb-0 md:text-center text-brand-dark;
-    }
-
-    .showcase-text-scroll {
-      @apply rotate-[-3deg] border-[.5vw] border-cream text-nowrap opacity-0 md:-mt-32 -mt-24;
-    }
-
-    .showcase-box {
-      @apply absolute md:bottom-16 bottom-5 w-full md:px-0 px-5;
-
-      .list-wrapper {
-        @apply bg-[#fdebd2] rounded-full border-[.5vw] border-[#e8ddca] mx-auto max-w-7xl md:py-8 py-5 md:px-0 px-5 flex justify-between items-center;
-
-        p {
-          @apply text-brand-dark;
-        }
-      }
-
-      .spacer-border {
-        @apply absolute right-0 top-1/2 transform -translate-y-1/2 md:h-24 h-16 w-px bg-brand-mid;
-      }
+    .cinema-title {
+      @apply font-bold uppercase leading-none tracking-tight text-[#E8FF00];
+      font-size: clamp(4rem, 14vw, 16rem);
+      line-height: 0.9;
     }
   }
 

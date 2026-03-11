@@ -14,9 +14,18 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const App = () => {
   useGSAP(() => {
-    ScrollSmoother.create({
+    const smoother = ScrollSmoother.create({
       smooth: 3,
       effects: true,
+    });
+
+    // Force smoother to top, then refresh all ScrollTrigger calculations.
+    // Two rAF frames ensure the DOM is fully painted before refresh runs.
+    smoother.scrollTo(0, false);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+      });
     });
   });
 

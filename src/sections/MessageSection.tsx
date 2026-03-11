@@ -71,7 +71,7 @@ const MessageSection = () => {
       <div className="container mx-auto flex-center py-28 relative">
         <div className="w-full h-full">
           <div className="msg-wrapper">
-            <h1 className="first-message">We believe great design is</h1>
+            <h1 className="first-message">Stop Making Ads.</h1>
 
             <div
               style={{
@@ -80,21 +80,21 @@ const MessageSection = () => {
               className="msg-text-scroll"
             >
               <div className="bg-brand md:pb-5 pb-3 px-5">
-                <h2 className="text-brand-dark">Transformative</h2>
+                <h2 className="text-brand-dark">Start Creating</h2>
               </div>
             </div>
 
             <h1 className="second-message">
-              and every brand deserves to be unforgettable
+              Shows that build audience, characters and IP.
             </h1>
           </div>
 
           <div className="flex-center md:mt-20 mt-10">
             <div className="max-w-md px-10 flex-center overflow-hidden">
               <p>
-                We merge bold creative vision with strategic precision to build
-                brands that don't just exist — they command attention, spark
-                emotion, and drive meaningful change.
+                Influencer ads are forgettable. Shows build audience, characters
+                and IP — assets that keep working for your brand long after the
+                campaign ends.
               </p>
             </div>
           </div>

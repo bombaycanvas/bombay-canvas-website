@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cd \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && npm run dev)"
+      "Bash(cd \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && npm run dev)",
+      "Bash(cd \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && npm install motion lucide-react && npm uninstall gsap @gsap/react)",
+      "Bash(cd \"C:/Users/sabat/OneDrive/Desktop/My projects/silicon/bombay/bombay 1\" && mkdir -p public && cp -r _temp_template/public/* public/ && mv public/f*.mp4 public/videos/ 2>/dev/null; mv public/hero-bg.mp4 public/videos/ 2>/dev/null; mv public/pin-video.mp4 public/videos/ 2>/dev/null; mv public/splash.mp4 public/videos/ 2>/dev/null; rm -rf _temp_template && mkdir -p src/components src/sections src/constants && echo \"done\")"
     ]
   }
 }

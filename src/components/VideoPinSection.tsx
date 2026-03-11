@@ -25,7 +25,7 @@ const VideoPinSection = () => {
   });
 
   return (
-    <section className="vd-pin-section">
+    <section className="vd-pin-section bg-[#222123]">
       <div
         style={{
           clipPath: isMobile

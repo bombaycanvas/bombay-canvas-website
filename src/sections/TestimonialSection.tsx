@@ -7,15 +7,11 @@ const TestimonialSection = () => {
   const vdRef = useRef<(HTMLVideoElement | null)[]>([]);
 
   useGSAP(() => {
-    gsap.set(".testimonials-section", {
-      marginTop: "-140vh",
-    });
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".testimonials-section",
         start: "top bottom",
-        end: "200% top",
+        end: "100% top",
         scrub: true,
       },
     });
@@ -42,7 +38,7 @@ const TestimonialSection = () => {
       scrollTrigger: {
         trigger: ".testimonials-section",
         start: "10% top",
-        end: "200% top",
+        end: "100% top",
         scrub: 1.5,
         pin: true,
       },
@@ -65,10 +61,10 @@ const TestimonialSection = () => {
 
   return (
     <section className="testimonials-section">
-      <div className="absolute size-full flex flex-col items-center pt-[5vw]">
-        <h1 className="text-brand-dark first-title">Our</h1>
-        <h1 className="text-white sec-title">Creative</h1>
-        <h1 className="text-brand-dark third-title">Process</h1>
+      <div className="absolute size-full flex flex-col items-center pt-[8vw]">
+        <h1 className="text-brand-dark first-title">Modern</h1>
+        <h1 className="text-white sec-title">Story</h1>
+        <h1 className="text-brand-dark third-title">Telling</h1>
       </div>
 
       <div className="pin-box">

@@ -36,6 +36,17 @@ const HeroSection = () => {
           ease: "power2.out",
         },
         "-=0.5"
+      )
+      .from(
+        ".hero-stat",
+        {
+          yPercent: 40,
+          opacity: 0,
+          stagger: 0.1,
+          duration: 0.6,
+          ease: "power2.out",
+        },
+        "-=0.3"
       );
 
     const heroTl = gsap.timeline({
@@ -76,7 +87,7 @@ const HeroSection = () => {
 
         <div className="hero-content opacity-0">
           <div className="overflow-hidden">
-            <h1 className="hero-title">Creative Excellence</h1>
+            <h1 className="hero-title">We Create Shows For Brands</h1>
           </div>
           <div
             style={{
@@ -85,17 +96,33 @@ const HeroSection = () => {
             className="hero-text-scroll"
           >
             <div className="hero-subtitle">
-              <h1>Design + Strategy</h1>
+              <h1>Reels · Shorts · TV</h1>
             </div>
           </div>
 
           <h2>
-            We craft digital experiences that captivate, inspire, and transform
-            brands into cultural forces. Every pixel tells a story.
+            Branded micro-series and IPs built for Reels, Shorts and creator
+            networks — with a cinematic 4:3 version ready for TV and streaming.
           </h2>
 
           <div className="hero-button">
-            <p>Start a Project</p>
+            <p>Work With Us</p>
+          </div>
+
+          {/* Proof strip */}
+          <div className="flex flex-wrap justify-center gap-8 md:gap-16 md:mt-20 mt-12">
+            <div className="hero-stat text-center">
+              <p className="font-bold text-2xl md:text-3xl tracking-tight">120+</p>
+              <p className="font-paragraph text-white/60 text-xs md:text-sm mt-1">Episodes Produced</p>
+            </div>
+            <div className="hero-stat text-center">
+              <p className="font-bold text-2xl md:text-3xl tracking-tight">324K+</p>
+              <p className="font-paragraph text-white/60 text-xs md:text-sm mt-1">Audience Community</p>
+            </div>
+            <div className="hero-stat text-center">
+              <p className="font-bold text-2xl md:text-3xl tracking-tight">200+</p>
+              <p className="font-paragraph text-white/60 text-xs md:text-sm mt-1">Creator Distribution Partners</p>
+            </div>
           </div>
         </div>
       </div>

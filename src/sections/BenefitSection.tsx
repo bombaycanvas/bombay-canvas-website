@@ -2,16 +2,15 @@ import { useGSAP } from "@gsap/react";
 import ClipPathTitle from "../components/ClipPathTitle";
 import gsap from "gsap";
 import VideoPinSection from "../components/VideoPinSection";
-import { benefits } from "../constants";
+import { whyUsPoints } from "../constants";
 
 const BenefitSection = () => {
   useGSAP(() => {
     const revealTl = gsap.timeline({
-      delay: 1,
       scrollTrigger: {
         trigger: ".benefit-section",
-        start: "top 60%",
-        end: "top top",
+        start: "top 80%",
+        end: "30% center",
         scrub: 1.5,
       },
     });
@@ -47,28 +46,33 @@ const BenefitSection = () => {
 
   return (
     <section className="benefit-section">
-      <div className="container mx-auto pt-20">
+      <div className="container mx-auto pt-28 pb-20">
         <div className="col-center">
           <p>
-            Why Work With Us: <br />
-            The Bombay Design Difference
+            Why Brands Work With Us: <br />
+            Because creating short-form shows isn't everyone's cup of tea.
           </p>
 
           <div className="mt-20 col-center">
-            {benefits.map((benefit, i) => (
+            {whyUsPoints.map((point, i) => (
               <ClipPathTitle
-                key={benefit.title}
-                title={benefit.title}
-                color={benefit.color}
-                bg={benefit.bg}
+                key={point.title}
+                title={point.title}
+                color={point.color}
+                bg={point.bg}
                 className={classNames[i]}
-                borderColor={benefit.borderColor}
+                borderColor={point.borderColor}
               />
             ))}
           </div>
 
-          <div className="md:mt-0 mt-10">
-            <p>And much more ...</p>
+          <div className="mt-16 max-w-lg">
+            <p>
+              It's about building characters, pacing stories for mobile screens,
+              and keeping audiences hooked episode after episode. Our team works
+              hands-on with some of the most popular creators across Instagram
+              and TikTok.
+            </p>
           </div>
         </div>
       </div>

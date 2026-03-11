@@ -1,21 +1,12 @@
 import { useMediaQuery } from "react-responsive";
-import { stats } from "../constants";
-import { useEffect, useState } from "react";
+import { distributionStats } from "../constants";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
 
 const ShowcaseSection = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const [displayStats, setDisplayStats] = useState(stats);
-
-  useEffect(() => {
-    if (isMobile) {
-      setDisplayStats(stats.slice(0, 3));
-    } else {
-      setDisplayStats(stats);
-    }
-  }, [isMobile]);
+  const displayStats = isMobile ? distributionStats.slice(0, 3) : distributionStats;
 
   useGSAP(() => {
     const titleSplit = SplitText.create(".showcase-title", {
@@ -30,6 +21,7 @@ const ShowcaseSection = () => {
       scrollTrigger: {
         trigger: ".showcase-section",
         start: "top center",
+        toggleActions: "play reverse play reverse",
       },
     });
     contentTl
@@ -50,6 +42,7 @@ const ShowcaseSection = () => {
       scrollTrigger: {
         trigger: ".showcase-section",
         start: "top 80%",
+        toggleActions: "play reverse play reverse",
       },
     });
 
@@ -75,7 +68,7 @@ const ShowcaseSection = () => {
         <div className="relative inline-block md:translate-y-20">
           <div className="general-title relative flex flex-col justify-center items-center gap-24">
             <div className="overflow-hidden place-self-start">
-              <h1 className="showcase-title">Our Impact</h1>
+              <h1 className="showcase-title">Already a Hit</h1>
             </div>
             <div
               style={{
@@ -84,7 +77,7 @@ const ShowcaseSection = () => {
               className="showcase-text-scroll place-self-start"
             >
               <div className="bg-brand-mid pb-5 md:pt-0 pt-3 md:px-5 px-3">
-                <h2 className="text-cream">In Numbers</h2>
+                <h2 className="text-cream">Before Launch</h2>
               </div>
             </div>
           </div>
@@ -93,8 +86,8 @@ const ShowcaseSection = () => {
         <div className="flex md:justify-center items-center translate-y-5">
           <div className="md:max-w-xs max-w-md">
             <p className="text-lg md:text-right text-balance font-paragraph text-brand-dark">
-              Every project is a partnership. We measure our success not just
-              in awards, but in the lasting impact we create for our clients.
+              Every Bombay Canvas series launches with distribution across our
+              owned pages, 200+ creator channels, and our own OTT platform.
             </p>
           </div>
         </div>

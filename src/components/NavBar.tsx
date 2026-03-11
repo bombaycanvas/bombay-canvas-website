@@ -7,7 +7,7 @@ const NavBar = () => {
         <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
           <div className="w-4 h-4 border-2 border-brand-mid rounded-full" />
         </div>
-        Bombay
+        Bombay Canvas
       </div>
 
       <div className="hidden md:flex items-center gap-8 font-bold text-sm text-white">

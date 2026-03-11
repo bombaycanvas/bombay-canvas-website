@@ -1,5 +1,5 @@
 import { useGSAP } from "@gsap/react";
-import { services } from "../constants";
+import { shows } from "../constants";
 import gsap from "gsap";
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
@@ -18,15 +18,15 @@ const ServicesSlider = () => {
         scrollTrigger: {
           trigger: ".services-section",
           start: "2% top",
-          end: `+=${scrollAmount + 1500}px`,
+          end: `+=${scrollAmount}px`,
           scrub: true,
           pin: true,
         },
       });
 
       tl.to(".services-section", {
-        x: `-${scrollAmount + 1500}px`,
-        ease: "power1.inOut",
+        x: `-${scrollAmount}px`,
+        ease: "none",
       });
     }
 
@@ -65,28 +65,34 @@ const ServicesSlider = () => {
   return (
     <div ref={sliderRef} className="slider-wrapper">
       <div className="service-cards">
-        {services.map((service) => (
+        {shows.map((show) => (
           <div
-            key={service.title}
-            className={`relative z-30 lg:w-[50vw] w-96 lg:h-[70vh] md:w-[90vw] md:h-[50vh] h-80 flex-none ${service.rotation} group cursor-pointer`}
+            key={show.title}
+            className={`relative z-30 lg:w-[50vw] w-96 lg:h-[70vh] md:w-[90vw] md:h-[50vh] h-80 flex-none ${show.rotation} group cursor-pointer`}
           >
-            <div className="absolute inset-0 rounded-3xl overflow-hidden">
+            {/* Poster placeholder */}
+            <div className="absolute inset-0 rounded-3xl overflow-hidden border-2 border-white/10">
               <div
                 className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
                 style={{
-                  background: `linear-gradient(135deg, ${service.color}22, ${service.color}88, ${service.color})`,
+                  background: `linear-gradient(135deg, ${show.color}22, ${show.color}88, ${show.color})`,
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1a1108] via-transparent to-transparent opacity-60" />
+
+              {/* Poster placeholder text */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <p className="text-white/20 font-bold text-lg uppercase tracking-widest">Show Poster</p>
+              </div>
             </div>
 
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-10 z-10">
               <p className="text-white/60 font-paragraph text-sm uppercase tracking-widest mb-3">
-                {service.description}
+                {show.description}
               </p>
             </div>
 
-            <h1>{service.title}</h1>
+            <h1>{show.title}</h1>
           </div>
         ))}
       </div>

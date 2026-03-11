@@ -29,12 +29,8 @@ const App = () => {
           <MessageSection />
           <ServicesSection />
           <ShowcaseSection />
-
-          <div>
-            <BenefitSection />
-            <TestimonialSection />
-          </div>
-
+          <BenefitSection />
+          <TestimonialSection />
           <FooterSection />
         </div>
       </div>

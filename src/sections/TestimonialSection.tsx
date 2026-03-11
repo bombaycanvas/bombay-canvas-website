@@ -60,7 +60,7 @@ const TestimonialSection = () => {
         {showPosters.map((poster, index) => (
           <div
             key={index}
-            className={`poster-card ${poster.translation || ""} ${poster.rotation} md:w-96 w-80 flex-none md:rounded-[2vw] rounded-3xl -ms-44 overflow-hidden 2xl:relative absolute border-[.5vw] border-brand`}
+            className={`poster-card ${poster.translation || ""} ${poster.rotation} lg:w-32 lg:-ms-20 2xl:w-96 2xl:-ms-44 w-80 -ms-44 flex-none md:rounded-[2vw] rounded-3xl overflow-hidden 2xl:relative absolute border-[.5vw] border-brand`}
           >
             <img
               src={poster.src}

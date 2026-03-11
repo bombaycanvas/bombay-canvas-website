@@ -215,7 +215,7 @@ body::-webkit-scrollbar {
     @apply bg-brand relative w-full h-[180dvh];
 
     .pin-box {
-      @apply flex items-center justify-center w-full ps-52 absolute 2xl:bottom-32 bottom-[40vh];
+      @apply flex items-center justify-center w-full ps-52 absolute 2xl:bottom-32 lg:bottom-0 bottom-[40vh];
 
       .vd-card {
         @apply md:w-96 w-80 flex-none md:rounded-[2vw] rounded-3xl -ms-44 overflow-hidden 2xl:relative absolute border-[.5vw] border-brand;
@@ -223,7 +223,8 @@ body::-webkit-scrollbar {
     }
 
     h1 {
-      @apply uppercase text-[12vw] leading-[110%] tracking-[-.4vw] ml-[2vw] font-bold;
+      font-size: clamp(3.5rem, 12vw, 16rem);
+      @apply uppercase leading-[110%] tracking-[-.4vw] ml-[2vw] font-bold;
     }
   }
 
